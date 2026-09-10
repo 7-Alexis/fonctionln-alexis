@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fonction ln — Cours Terminale | ALEXIS</title>
+
+    <meta name="description"
+          content="Cours interactif de Terminale sur la fonction logarithme népérien créé par ALEXIS.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================================
+     HEADER
+================================ -->
+
+<header>
+
+    <div class="header-content">
+
+        <div>
+            <h1>📐 Fonction logarithme népérien</h1>
+
+            <p>
+                Cours interactif de Mathématiques — Niveau Terminale
+            </p>
+
+            <p>
+                Créé par <strong>ALEXIS</strong> 🤓
+            </p>
+        </div>
+
+        <!-- BOUTON MODE SOMBRE -->
+        <button id="themeToggle" class="theme-toggle" type="button">
+            🌙 Mode sombre
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- ================================
+     CONTENU PRINCIPAL
+================================ -->
+
+<main class="container">
+
+    <!-- PRÉSENTATION -->
+
+    <section class="card">
+        <h2>👋 Bienvenue</h2>
+
+        <p>
+            Bienvenue sur ce cours interactif consacré à la
+            <strong>fonction logarithme népérien</strong>.
+        </p>
+
+        <p>
+            Ce site a été conçu par <strong>ALEXIS</strong> pour
+            aider les élèves de Terminale à comprendre,
+            réviser et pratiquer la fonction <strong>ln</strong>.
+        </p>
+
+        <div class="formule">
+            🎯 Objectif : comprendre la fonction ln et savoir
+            l'utiliser dans les exercices de Terminale.
+        </div>
+    </section>
+
+
+    <!-- 1. INTRODUCTION -->
+
+    <section class="card">
+        <h2>1. 📚 Introduction</h2>
+
+        <p>
+            La fonction logarithme népérien, notée <strong>ln</strong>,
+            est une fonction très importante en mathématiques.
+        </p>
+
+        <p>
+            Elle est liée à la fonction exponentielle et intervient
+            dans de nombreux problèmes de Terminale.
+        </p>
+
+        <div class="formule">
+            ln(e) = 1
+        </div>
+    </section>
+
+
+    <!-- 2. DEFINITION -->
+
+    <section class="card">
+        <h2>2. 📖 Définition</h2>
+
+        <p>
+            La fonction logarithme népérien est définie sur
+            l'ensemble des nombres réels strictement positifs.
+        </p>
+
+        <div class="formule">
+            Domaine de définition : ]0 ; +∞[
+        </div>
+
+        <p>
+            Pour tout réel <strong>x &gt; 0</strong>, ln(x) est le nombre
+            réel tel que :
+        </p>
+
+        <div class="formule">
+            e<sup>ln(x)</sup> = x
+        </div>
+    </section>
+
+
+    <!-- 3. RELATION AVEC EXP -->
+
+    <section class="card">
+        <h2>3. 🔗 Relation avec la fonction exponentielle</h2>
+
+        <p>
+            Les fonctions exponentielle et logarithme népérien
+            sont réciproques l'une de l'autre.
+        </p>
+
+        <div class="formule">
+            e<sup>ln(x)</sup> = x &nbsp;&nbsp; (x &gt; 0)
+        </div>
+
+        <div class="formule">
+            ln(e<sup>x</sup>) = x
+        </div>
+
+        <p>
+            Ces deux relations sont fondamentales.
+        </p>
+    </section>
+
+
+    <!-- 4. DOMAINE -->
+
+    <section class="card">
+        <h2>4. 🚨 Domaine de définition</h2>
+
+        <p>
+            On peut calculer <strong>ln(x)</strong> uniquement lorsque :
+        </p>
+
+        <div class="formule">
+            x &gt; 0
+        </div>
+
+        <h3>Exemples</h3>
+
+        <ul>
+            <li>ln(2) ✅ existe</li>
+            <li>ln(0,5) ✅ existe</li>
+            <li>ln(1) ✅ existe</li>
+            <li>ln(0) ❌ n'existe pas</li>
+            <li>ln(-3) ❌ n'existe pas dans ℝ</li>
+        </ul>
+    </section>
+
+
+    <!-- 5. PROPRIETES -->
+
+    <section class="card">
+        <h2>5. 🧮 Propriétés du logarithme</h2>
+
+        <p>
+            Pour <strong>a &gt; 0</strong> et <strong>b &gt; 0</strong> :
+        </p>
+
+        <div class="formule">
+            ln(ab) = ln(a) + ln(b)
+        </div>
+
+        <div class="formule">
+            ln(a / b) = ln(a) − ln(b)
+        </div>
+
+        <div class="formule">
+            ln(a<sup>n</sup>) = n ln(a)
+        </div>
+
+        <div class="formule">
+            ln(1 / a) = −ln(a)
+        </div>
+
+        <div class="formule">
+            ln(√a) = ½ ln(a)
+        </div>
+
+        <h3>⚠️ Attention</h3>
+
+        <p>
+            Il ne faut surtout pas écrire :
+        </p>
+
+        <div class="formule">
+            ln(a + b) = ln(a) + ln(b) ❌
+        </div>
+
+        <p>
+            Cette propriété est fausse.
+        </p>
+    </section>
+
+
+    <!-- 6. VALEURS REMARQUABLES -->
+
+    <section class="card">
+        <h2>6. ⭐ Valeurs remarquables</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Expression</th>
+                    <th>Valeur</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>ln(1)</td>
+                    <td>0</td>
+                </tr>
+
+                <tr>
+                    <td>ln(e)</td>
+                    <td>1</td>
+                </tr>
+
+                <tr>
+                    <td>ln(e²)</td>
+                    <td>2</td>
+                </tr>
+
+                <tr>
+                    <td>ln(e³)</td>
+                    <td>3</td>
+                </tr>
+
+                <tr>
+                    <td>e<sup>ln(x)</sup></td>
+                    <td>x</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+
+    <!-- 7. DERIVEE -->
+
+    <section class="card">
+        <h2>7. ✏️ Dérivée</h2>
+
+        <p>
+            La fonction <strong>ln(x)</strong> est dérivable sur
+            ]0 ; +∞[.
+        </p>
+
+        <div class="formule">
+            (ln x)' = 1 / x
+        </div>
+
+        <h3>Cas général</h3>
+
+        <p>
+            Si u est une fonction dérivable et u(x) &gt; 0 :
+        </p>
+
+        <div class="formule">
+            [ln(u(x))]' = u'(x) / u(x)
+        </div>
+
+        <h3>Exemple</h3>
+
+        <div class="formule">
+            f(x) = ln(2x + 1)
+        </div>
+
+        <p>
+            On a :
+        </p>
+
+        <div class="formule">
+            f'(x) = 2 / (2x + 1)
+        </div>
+    </section>
+
+
+    <!-- 8. LIMITES -->
+
+    <section class="card">
+        <h2>8. 📉 Limites importantes</h2>
+
+        <div class="formule">
+            lim<sub>x→0⁺</sub> ln(x) = −∞
+        </div>
+
+        <div class="formule">
+            lim<sub>x→+∞</sub> ln(x) = +∞
+        </div>
+
+        <div class="formule">
+            lim<sub>x→+∞</sub> ln(x) / x = 0
+        </div>
+
+        <p>
+            Ces limites sont très utiles lors de l'étude
+            des fonctions.
+        </p>
+    </section>
+
+
+    <!-- 9. VARIATIONS -->
+
+    <section class="card">
+        <h2>9. 📈 Variations de ln</h2>
+
+        <p>
+            Pour tout <strong>x &gt; 0</strong> :
+        </p>
+
+        <div class="formule">
+            (ln x)' = 1/x &gt; 0
+        </div>
+
+        <p>
+            La dérivée est positive sur ]0 ; +∞[.
+        </p>
+
+        <div class="formule">
+            👉 ln est strictement croissante sur ]0 ; +∞[
+        </div>
+    </section>
+
+
+    <!-- 10. GRAPHIQUE -->
+
+    <section class="card">
+        <h2>10. 📊 Courbe de la fonction ln</h2>
+
+        <p>
+            Voici la représentation graphique de :
+        </p>
+
+        <div class="formule">
+            y = ln(x)
+        </div>
+
+        <div class="graphique">
+            <canvas id="graphique" width="700" height="400">
+                Votre navigateur ne supporte pas le canvas.
+            </canvas>
+        </div>
+
+        <p>
+            Remarque : la courbe existe uniquement pour
+            <strong>x &gt; 0</strong>.
+        </p>
+    </section>
+
+
+    <!-- 11. TABLEAU -->
+
+    <section class="card">
+        <h2>11. 📋 Quelques valeurs de ln(x)</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>x</th>
+                    <th>ln(x)</th>
+                </tr>
+            </thead>
+
+            <tbody id="tableauLn">
+                <!-- Rempli automatiquement par JavaScript -->
+            </tbody>
+        </table>
+    </section>
+
+
+    <!-- 12. EQUATIONS -->
+
+    <section class="card">
+        <h2>12. 🧠 Équations logarithmiques</h2>
+
+        <p>
+            Pour résoudre une équation contenant ln,
+            il faut toujours vérifier le domaine de définition.
+        </p>
+
+        <h3>Exemple 1</h3>
+
+        <div class="formule">
+            ln(x) = 2
+        </div>
+
+        <p>
+            On applique la fonction exponentielle :
+        </p>
+
+        <div class="formule">
+            x = e²
+        </div>
+
+        <h3>Exemple 2</h3>
+
+        <div class="formule">
+            ln(x) = ln(5)
+        </div>
+
+        <p>
+            Comme ln est strictement croissante :
+        </p>
+
+        <div class="formule">
+            x = 5
+        </div>
+    </section>
+
+
+    <!-- 13. INEGALITES -->
+
+    <section class="card">
+        <h2>13. ⚖️ Inégalités logarithmiques</h2>
+
+        <p>
+            Comme la fonction ln est strictement croissante :
+        </p>
+
+        <div class="formule">
+            ln(a) &lt; ln(b) ⇔ a &lt; b
+        </div>
+
+        <p>
+            avec <strong>a &gt; 0</strong> et <strong>b &gt; 0</strong>.
+        </p>
+
+        <h3>Exemple</h3>
+
+        <div class="formule">
+            ln(x) &gt; ln(3)
+        </div>
+
+        <p>
+            Donc :
+        </p>
+
+        <div class="formule">
+            x &gt; 3
+        </div>
+    </section>
+
+
+    <!-- 14. ETUDE DE FONCTION -->
+
+    <section class="card">
+        <h2>14. 🔎 Étude d'une fonction contenant ln</h2>
+
+        <p>
+            Considérons :
+        </p>
+
+        <div class="formule">
+            f(x) = x ln(x)
+        </div>
+
+        <p>
+            Son domaine est :
+        </p>
+
+        <div class="formule">
+            D<sub>f</sub> = ]0 ; +∞[
+        </div>
+
+        <p>
+            Sa dérivée est :
+        </p>
+
+        <div class="formule">
+            f'(x) = ln(x) + 1
+        </div>
+
+        <p>
+            On peut ensuite étudier le signe de f'(x)
+            afin de déterminer les variations de f.
+        </p>
+    </section>
+
+
+    <!-- 15. CALCULATEUR -->
+
+    <section class="card">
+        <h2>15. 🧮 Calculateur de ln</h2>
+
+        <p>
+            Entre un nombre strictement positif pour calculer
+            son logarithme népérien.
+        </p>
+
+        <div class="calculateur">
+
+            <input
+                type="number"
+                id="nombre"
+                placeholder="Exemple : 2"
+                step="any"
+            >
+
+            <button onclick="calculerLn()">
+                Calculer ln(x)
+            </button>
+
+            <div id="resultat" class="resultat">
+                Le résultat apparaîtra ici.
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- 16. EXERCICES -->
+
+    <section class="card">
+        <h2>16. 📝 Exercices</h2>
+
+        <div class="exercice">
+            <h3>Exercice 1</h3>
+
+            <p>Calculer :</p>
+
+            <div class="formule">
+                A = ln(e³)
+            </div>
+
+            <button onclick="afficherSolution(1)">
+                Voir la correction
+            </button>
+
+            <div id="solution1" class="solution">
+                <strong>Correction :</strong>
+
+                <p>
+                    ln(e³) = 3 ln(e) = 3.
+                </p>
+
+                <strong>Réponse : A = 3.</strong>
+            </div>
+        </div>
+
+
+        <div class="exercice">
+            <h3>Exercice 2</h3>
+
+            <p>Résoudre :</p>
+
+            <div class="formule">
+                ln(x) = 4
+            </div>
+
+            <button onclick="afficherSolution(2)">
+                Voir la correction
+            </button>
+
+            <div id="solution2" class="solution">
+                <strong>Correction :</strong>
+
+                <p>ln(x) = 4</p>
+
+                <p>Donc :</p>
+
+                <div class="formule">
+                    x = e⁴
+                </div>
+
+                <strong>Solution : x = e⁴.</strong>
+            </div>
+        </div>
+
+
+        <div class="exercice">
+            <h3>Exercice 3</h3>
+
+            <p>Simplifier :</p>
+
+            <div class="formule">
+                ln(2) + ln(5)
+            </div>
+
+            <button onclick="afficherSolution(3)">
+                Voir la correction
+            </button>
+
+            <div id="solution3" class="solution">
+                <strong>Correction :</strong>
+
+                <p>
+                    ln(2) + ln(5) = ln(2 × 5)
+                </p>
+
+                <p>Donc :</p>
+
+                <div class="formule">
+                    ln(10)
+                </div>
+
+                <strong>Réponse : ln(10).</strong>
+            </div>
+        </div>
+
+
+        <div class="exercice">
+            <h3>Exercice 4</h3>
+
+            <p>Résoudre :</p>
+
+            <div class="formule">
+                ln(x) &gt; ln(7)
+            </div>
+
+            <button onclick="afficherSolution(4)">
+                Voir la correction
+            </button>
+
+            <div id="solution4" class="solution">
+                <strong>Correction :</strong>
+
+                <p>
+                    La fonction ln est strictement croissante.
+                </p>
+
+                <div class="formule">
+                    x &gt; 7
+                </div>
+
+                <strong>Solution : ]7 ; +∞[.</strong>
+            </div>
+        </div>
+
+
+        <div class="exercice">
+            <h3>Exercice 5</h3>
+
+            <p>Calculer :</p>
+
+            <div class="formule">
+                ln(1/e)
+            </div>
+
+            <button onclick="afficherSolution(5)">
+                Voir la correction
+            </button>
+
+            <div id="solution5" class="solution">
+                <strong>Correction :</strong>
+
+                <p>
+                    ln(1/e) = −ln(e)
+                </p>
+
+                <div class="formule">
+                    ln(1/e) = −1
+                </div>
+
+                <strong>Réponse : −1.</strong>
+            </div>
+        </div>
+
+
+        <div class="exercice">
+            <h3>Exercice 6</h3>
+
+            <p>Déterminer la dérivée de :</p>
+
+            <div class="formule">
+                f(x) = ln(3x + 2)
+            </div>
+
+            <button onclick="afficherSolution(6)">
+                Voir la correction
+            </button>
+
+            <div id="solution6" class="solution">
+                <strong>Correction :</strong>
+
+                <p>On utilise :</p>
+
+                <div class="formule">
+                    [ln(u)]' = u'/u
+                </div>
+
+                <p>Avec :</p>
+
+                <div class="formule">
+                    u(x) = 3x + 2
+                </div>
+
+                <p>Donc :</p>
+
+                <div class="formule">
+                    f'(x) = 3/(3x + 2)
+                </div>
+            </div>
+        </div>
+
+
+        <div class="exercice">
+            <h3>Exercice 7</h3>
+
+            <p>Étudier le sens de variation de :</p>
+
+            <div class="formule">
+                f(x) = ln(x)
+            </div>
+
+            <button onclick="afficherSolution(7)">
+                Voir la correction
+            </button>
+
+            <div id="solution7" class="solution">
+                <strong>Correction :</strong>
+
+                <p>
+                    Pour x &gt; 0 :
+                </p>
+
+                <div class="formule">
+                    f'(x) = 1/x &gt; 0
+                </div>
+
+                <p>
+                    La fonction est donc :
+                </p>
+
+                <div class="formule">
+                    strictement croissante sur ]0 ; +∞[
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- 17. FICHE DE REVISION -->
+
+    <section class="card">
+        <h2>17. 🚀 Fiche de révision</h2>
+
+        <h3>À retenir absolument</h3>
+
+        <ul>
+            <li>Domaine : ]0 ; +∞[</li>
+            <li>ln(1) = 0</li>
+            <li>ln(e) = 1</li>
+            <li>e<sup>ln(x)</sup> = x</li>
+            <li>ln(e<sup>x</sup>) = x</li>
+            <li>ln(ab) = ln(a) + ln(b)</li>
+            <li>ln(a/b) = ln(a) − ln(b)</li>
+            <li>ln(a<sup>n</sup>) = n ln(a)</li>
+            <li>(ln x)' = 1/x</li>
+            <li>ln est strictement croissante</li>
+        </ul>
+    </section>
+
+
+    <!-- 18. METHODE -->
+
+    <section class="card">
+        <h2>18. 🎯 Méthode pour réussir</h2>
+
+        <ol>
+            <li>Toujours déterminer le domaine de définition.</li>
+            <li>Connaître les propriétés de ln.</li>
+            <li>Connaître les valeurs remarquables.</li>
+            <li>Maîtriser la dérivée de ln.</li>
+            <li>Savoir résoudre les équations logarithmiques.</li>
+            <li>Savoir résoudre les inégalités logarithmiques.</li>
+            <li>Faire attention aux conditions x &gt; 0.</li>
+        </ol>
+
+        <div class="formule">
+            💡 Conseil d'ALEXIS :
+            comprendre les propriétés vaut mieux que les apprendre
+            sans comprendre.
+        </div>
+    </section>
+
+
+    <!-- 19. QUIZ -->
+
+    <section class="card">
+
+        <h2>19. 🧠 Quiz Terminale</h2>
+
+        <p>
+            Teste tes connaissances sur la fonction logarithme
+            népérien.
+        </p>
+
+        <button id="demarrerQuiz">
+            Commencer le quiz
+        </button>
+
+        <div id="quiz" style="margin-top:20px;">
+
+            <p>
+                Clique sur « Commencer le quiz » pour commencer.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- ================================
+     FOOTER
+================================ -->
+
+<footer>
+
+    <p>
+        📐 <strong>Fonction logarithme népérien</strong>
+    </p>
+
+    <p>
+        Niveau Terminale — Cours interactif
+    </p>
+
+    <p>
+        Créé avec ❤️ par <strong>ALEXIS</strong>
+    </p>
+
+    <a
+        href="https://wa.me/22657646024"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="whatsapp-btn"
+    >
+        💬 Me contacter sur WhatsApp
+    </a>
+
+    <p class="whatsapp-number">
+        +226 57 64 60 24
+    </p>
+
+    <p>
+        © 2026 ALEXIS — Tous droits réservés
+    </p>
+
+</footer>
+
+
+<!-- JAVASCRIPT -->
+
+<script src="script.js"></script>
+
+</body>
+</html>

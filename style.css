@@ -1,0 +1,746 @@
+/* =========================================
+   SITE MATHS — FONCTION ln
+   Design moderne • Mobile First
+   Créé par ALEXIS
+========================================= */
+
+/* =========================================
+   VARIABLES
+========================================= */
+
+:root {
+    --bg: #f4f7fb;
+    --card: #ffffff;
+    --text: #172033;
+    --text-light: #5d687a;
+    --primary: #1261d8;
+    --primary-dark: #0849a8;
+    --formula: #eef5ff;
+    --border: #dce4ef;
+    --table-head: #1261d8;
+    --table-row: #f8faff;
+    --footer: #101827;
+    --shadow: 0 8px 25px rgba(20, 40, 80, 0.08);
+}
+
+/* =========================================
+   MODE SOMBRE
+========================================= */
+
+body.dark-mode {
+    --bg: #0d1117;
+    --card: #161b22;
+    --text: #f0f3f6;
+    --text-light: #aab4c3;
+    --primary: #4c9aff;
+    --primary-dark: #2878dc;
+    --formula: #1b2b40;
+    --border: #303945;
+    --table-head: #1f6fd1;
+    --table-row: #111820;
+    --footer: #080b10;
+    --shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+}
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+header {
+    background: linear-gradient(
+        135deg,
+        #0d47a1,
+        #1261d8,
+        #1683f7
+    );
+
+    color: white;
+    padding: 30px 18px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.header-content {
+    max-width: 1100px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+    line-height: 1.25;
+}
+
+header p {
+    font-size: 1rem;
+    opacity: 0.95;
+}
+
+header strong {
+    color: #ffffff;
+}
+
+/* =========================================
+   BOUTON MODE SOMBRE
+========================================= */
+
+.theme-toggle {
+    border: 2px solid rgba(255, 255, 255, 0.45);
+
+    background: rgba(255, 255, 255, 0.14);
+    color: white;
+
+    padding: 11px 17px;
+    border-radius: 30px;
+
+    font-size: 0.95rem;
+    font-weight: bold;
+
+    cursor: pointer;
+    white-space: nowrap;
+
+    transition:
+        background 0.25s ease,
+        transform 0.2s ease,
+        border-color 0.25s ease;
+}
+
+.theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: white;
+}
+
+.theme-toggle:active {
+    transform: scale(0.96);
+}
+
+/* =========================================
+   CONTENEUR
+========================================= */
+
+.container {
+    width: min(1100px, 92%);
+    margin: 30px auto;
+}
+
+/* =========================================
+   CARTES
+========================================= */
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+
+    padding: 25px;
+    margin-bottom: 25px;
+
+    box-shadow: var(--shadow);
+
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-1px);
+}
+
+/* =========================================
+   TITRES
+========================================= */
+
+.card h2 {
+    color: var(--primary);
+    font-size: 1.55rem;
+    margin-bottom: 16px;
+
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 9px;
+}
+
+.card h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: var(--primary);
+}
+
+.card p {
+    margin-bottom: 14px;
+}
+
+strong {
+    font-weight: 700;
+}
+
+/* =========================================
+   LISTES
+========================================= */
+
+ul,
+ol {
+    padding-left: 25px;
+    margin: 12px 0;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* =========================================
+   FORMULES
+========================================= */
+
+.formule {
+    background: var(--formula);
+    color: var(--text);
+
+    border-left: 5px solid var(--primary);
+
+    border-radius: 10px;
+
+    padding: 15px 18px;
+    margin: 15px 0;
+
+    font-size: 1.05rem;
+    font-weight: 600;
+
+    overflow-x: auto;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+/* =========================================
+   TABLEAUX
+========================================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+
+    margin-top: 15px;
+
+    overflow: hidden;
+    border-radius: 10px;
+
+    border: 1px solid var(--border);
+}
+
+th,
+td {
+    padding: 13px 12px;
+    text-align: center;
+
+    border-bottom: 1px solid var(--border);
+}
+
+th {
+    background: var(--table-head);
+    color: white;
+    font-weight: bold;
+}
+
+td {
+    background: var(--table-row);
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* =========================================
+   GRAPHIQUE
+========================================= */
+
+.graphique {
+    width: 100%;
+    overflow-x: auto;
+
+    background: white;
+
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    padding: 10px;
+    margin: 20px 0;
+}
+
+body.dark-mode .graphique {
+    background: #ffffff;
+}
+
+canvas {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+/* =========================================
+   CALCULATEUR
+========================================= */
+
+.calculateur {
+    background: var(--formula);
+
+    padding: 20px;
+
+    border-radius: 14px;
+    border: 1px solid var(--border);
+
+    margin-top: 15px;
+}
+
+.calculateur input {
+    width: 100%;
+
+    padding: 14px;
+
+    border: 2px solid var(--border);
+    border-radius: 10px;
+
+    background: var(--card);
+    color: var(--text);
+
+    font-size: 1rem;
+
+    outline: none;
+
+    margin-bottom: 12px;
+
+    transition:
+        border-color 0.2s ease,
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.calculateur input:focus {
+    border-color: var(--primary);
+}
+
+button {
+    border: none;
+
+    background: var(--primary);
+    color: white;
+
+    padding: 12px 18px;
+
+    border-radius: 10px;
+
+    font-size: 1rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.15s ease;
+}
+
+button:hover {
+    background: var(--primary-dark);
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+/* =========================================
+   RESULTAT CALCULATEUR
+========================================= */
+
+.resultat {
+    margin-top: 15px;
+
+    background: var(--card);
+
+    border: 2px solid var(--primary);
+
+    border-radius: 10px;
+
+    padding: 15px;
+
+    font-weight: bold;
+    text-align: center;
+
+    color: var(--text);
+}
+
+/* =========================================
+   EXERCICES
+========================================= */
+
+.exercice {
+    border: 1px solid var(--border);
+
+    background: var(--table-row);
+
+    border-radius: 14px;
+
+    padding: 20px;
+
+    margin: 20px 0;
+
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.exercice h3 {
+    margin-top: 0;
+}
+
+.solution {
+    display: none;
+
+    background: var(--formula);
+
+    border-left: 5px solid #21a366;
+
+    border-radius: 10px;
+
+    padding: 16px;
+
+    margin-top: 15px;
+}
+
+.solution strong {
+    color: #168447;
+}
+
+body.dark-mode .solution strong {
+    color: #42d98a;
+}
+
+/* =========================================
+   QUIZ
+========================================= */
+
+#quiz {
+    padding-top: 5px;
+}
+
+#quiz button {
+    margin: 7px 5px 7px 0;
+}
+
+.quiz-question {
+    background: var(--formula);
+
+    border-radius: 12px;
+
+    padding: 18px;
+
+    margin-bottom: 15px;
+}
+
+.quiz-progress {
+    height: 10px;
+
+    background: var(--border);
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    margin: 15px 0;
+}
+
+.quiz-progress-bar {
+    height: 100%;
+
+    background: var(--primary);
+
+    border-radius: 20px;
+
+    transition: width 0.3s ease;
+}
+
+/* =========================================
+   REPONSES QUIZ
+========================================= */
+
+.quiz-correct {
+    background: #d9f8e5 !important;
+    color: #126b35 !important;
+
+    border: 2px solid #21a366 !important;
+}
+
+.quiz-wrong {
+    background: #ffe0e0 !important;
+    color: #9b2020 !important;
+
+    border: 2px solid #e04444 !important;
+}
+
+body.dark-mode .quiz-correct {
+    background: #163d29 !important;
+    color: #7df0a8 !important;
+}
+
+body.dark-mode .quiz-wrong {
+    background: #451d1d !important;
+    color: #ff8f8f !important;
+}
+
+/* =========================================
+   LIENS
+========================================= */
+
+a {
+    color: var(--primary);
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* =========================================
+   WHATSAPP
+========================================= */
+
+.whatsapp-btn {
+    display: inline-block;
+
+    background: #25d366;
+    color: white;
+
+    text-decoration: none;
+
+    padding: 13px 20px;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    margin: 10px 0;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.whatsapp-btn:hover {
+    background: #1ebe5d;
+    transform: translateY(-2px);
+}
+
+.whatsapp-number {
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    background: var(--footer);
+    color: #dce3ed;
+
+    text-align: center;
+
+    padding: 35px 18px;
+
+    margin-top: 40px;
+
+    transition: background-color 0.3s ease;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer strong {
+    color: white;
+}
+
+/* =========================================
+   SELECTION DU TEXTE
+========================================= */
+
+::selection {
+    background: var(--primary);
+    color: white;
+}
+
+/* =========================================
+   RESPONSIVE — TABLETTE
+========================================= */
+
+@media (max-width: 800px) {
+
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 1.7rem;
+    }
+
+    .theme-toggle {
+        margin-top: 5px;
+    }
+
+    .card {
+        padding: 21px;
+    }
+}
+
+/* =========================================
+   RESPONSIVE — TELEPHONE
+========================================= */
+
+@media (max-width: 600px) {
+
+    body {
+        font-size: 0.96rem;
+    }
+
+    header {
+        padding: 25px 15px;
+    }
+
+    header h1 {
+        font-size: 1.4rem;
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+
+    .container {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    .card {
+        padding: 17px;
+        border-radius: 14px;
+        margin-bottom: 18px;
+    }
+
+    .card h2 {
+        font-size: 1.25rem;
+    }
+
+    .card h3 {
+        font-size: 1.05rem;
+    }
+
+    .formule {
+        font-size: 0.95rem;
+        padding: 13px;
+    }
+
+    th,
+    td {
+        padding: 10px 7px;
+        font-size: 0.9rem;
+    }
+
+    .calculateur {
+        padding: 15px;
+    }
+
+    .calculateur button {
+        width: 100%;
+    }
+
+    .theme-toggle {
+        width: 100%;
+        max-width: 230px;
+    }
+
+    .whatsapp-btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+/* =========================================
+   PETITS TELEPHONES
+========================================= */
+
+@media (max-width: 380px) {
+
+    header h1 {
+        font-size: 1.25rem;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .card {
+        padding: 14px;
+    }
+
+    .card h2 {
+        font-size: 1.15rem;
+    }
+
+    .formule {
+        font-size: 0.9rem;
+    }
+
+    th,
+    td {
+        font-size: 0.82rem;
+        padding: 8px 5px;
+    }
+}
+
+/* =========================================
+   ANIMATION D'APPARITION
+========================================= */
+
+.card {
+    animation: apparition 0.45s ease;
+}
+
+@keyframes apparition {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
